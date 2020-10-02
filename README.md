@@ -4,7 +4,7 @@ My collection of nifty (or so I think) examples on how do a few simple things wi
 
 **Note:** The examples in this repo are work in progress. I'll add more examples as I need them. Please open an issue if you're looking for a specific example not found here.
 
-## Pre-Processors
+## Pre-Processors
 
 * [string-to-bollean](js/pre/string-to-bollean.js)
 
