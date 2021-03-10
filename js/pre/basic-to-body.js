@@ -1,7 +1,6 @@
 var params = serviceInputParams
 var Base64 = java.util.Base64
 
-
 /**
  * atob - A polyfill for the atob function.
  *  
@@ -18,7 +17,6 @@ function atob(encoded){
 	return chars.join("")
 }
 
-
 /**
  * basicToBody - Decodes a Basic authorization header and puts the credentials in the request's body.
  *  
@@ -30,7 +28,7 @@ function basicToBody(){
 		var authorization = request.getHeader('authorization') || request.getHeader('Authorization')
 		if(typeof authorization !== "undefined"){
 
-			var decoded = atob(authorization)
+			var decoded = atob( authorization.replace("Basic ", "") )
 			var split = decoded.split(":")
 			var key = split[0]
 			var secret = split[1]
