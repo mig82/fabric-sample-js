@@ -7,6 +7,7 @@ My collection of nifty (or so I think) examples on how do a few simple things wi
 ## Pre-Processors
 
 * [string-to-bollean](js/pre/string-to-bollean.js)
+* [basic-to-body](js/pre/basic-to-body.js)
 
 ## Post-Processors
 
