@@ -3,14 +3,14 @@ var ArrayList = java.util.ArrayList;
 /**
 * Given a result with an array, transforms the result to be the first element in the array.
 */
-function respondWithFirst(arrayName, recordName){
+function findAt(arrayName, recordName, index){
 
 	var recordsDs = result.findDataset(arrayName);
 
-	if(recordsDs && recordsDs.getRecords().length > 0){
+	if(recordsDs && recordsDs.getRecords().length > 0 && index < recordsDs.getRecords().length){
 
-		//Get the first object in the array.
-		var record = recordsDs.getRecord(0);
+		//Get the object at index in the array.
+		var record = recordsDs.getRecord(index);
 		record.setID(recordName);
 
 		//Add the first object directly to the result.
@@ -22,4 +22,4 @@ function respondWithFirst(arrayName, recordName){
 
 }
 
-respondWithFirst("cards", "card");
+findAt("cards", "card", 3);
